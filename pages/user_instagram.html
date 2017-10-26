@@ -1,0 +1,65 @@
+<div ng-controller="instagramController">
+    <nav class="navbar navbar-primary">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example-navbar-primary">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand">INSTA</a>
+            </div>
+            <div class="collapse navbar-collapse" id="example-navbar-primary">
+                <ul class="nav navbar-nav navbar-right">
+                    
+                    <li ui-sref="facebook">
+                        <a ui-sref="facebook">
+                          <i class="fa fa-facebook-square"></i> Facebook
+                        </a>
+                    </li>
+                    <li class="active" ui-sref="instagram">
+                        <a style="cursor:pointer" ui-sref="instagram">
+                            <i class="fa fa-instagram"></i> Instagram
+                            <div class="ripple-container"></div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+     
+        <div class="main main-raised" style="margin-right:30px;margin-left:30px;margin-top:0px;">
+            <div class="section section-basic">
+                <div class="container">
+                  <div ng-show="showData == true">
+                  <div class="col-sm-offset-1" style="margin-left:0px;">
+
+	                        <img ng-src="{{data.profile_pic_url}}" alt="Raised Image" class="img-rounded img-responsive img-raised">
+	                    </div>
+                    <div class="title">
+                        <h2>{{data.username}}</h2>
+                    </div>
+                    <p>{{data.biography}}</p>
+                    <div class="title">
+                      <h2>Followed by : {{data.followed_by.count}}</h2>
+                      <h2>Follows : {{data.follows.count}}</h2>
+                        <h2>Total Posts : {{data.media.count}}</h2>
+                    </div>
+                  </div>
+                  <div class="title">
+                        <h2>Likes per Post :</h2>
+                    </div>
+                    <div ng-repeat="media in media" class="col-sm-offset-1" style="margin-left:0px;">
+
+  	                        <h5>post {{$index + 1}} - {{media.likes.count}}</h5>
+  	                    </div>
+                    <div ng-show="showData == false" class="preloader4 col-md-offset-6" style="margin-top:30px;margin-bottom:20px;"></div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</div>
