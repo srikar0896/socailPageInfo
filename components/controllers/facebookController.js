@@ -5,7 +5,7 @@ function($scope,$state,$http,$q){
   $scope.showData = false;
   $scope.pageDetails = {};
 
-  var access_token = "EAAEQVkGYm0kBAHgZAZCgMGquzgVTbeiqNyeF1Ot8HsDkik2Ke8gFfolgWlZAUsbQbo0OKiArlyCjH6Vn6Cm53yZCETmYEdJKHGHRg09zq4AzM5eFyGuu59K01NbNoPNXnQqd5GRG4uYVLqWDapbs1HLp4ZBZCYRCoZA05T9yD7X7dARvQoWZBKZBsOKPsNwnnOeYZD"
+  var access_token = "EAABxZBeutnvoBAHbAzHXuLZBK5XJAjCQWVuP6dX45f9rIgI4gRyDL1TfPNKHuKp3zvIu8ZCAGiATczbEFKjp67wWA9cS7yXQaBQAZBJDH1b4dyZASZBgkuToLco6n6ProURvy6b39XlQNajDHLwyZCWM0fR8ZATkBlwZD"
   $scope.posts = [];
   $scope.postLikes = [];
   $http({
